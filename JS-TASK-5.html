@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-TASK-5</title>
+</head>
+<body>
+    <script>
+        function validate() {
+          let name = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let website = document.getElementById("website").value;
+          let message = document.getElementById("message").value;
+
+          if(name.length<=0){
+            document.getElementById("er1").innerHTML=" This Field is Required";
+            document.getElementById("name").style.border="2px solid red";
+          }
+          if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+            document.getElementById("er2").innerHTML=" A valid email address is required";
+            document.getElementById("email").style.border="2px solid red";
+          }
+          if(!(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/.test(website))){
+            document.getElementById("er3").innerHTML=" A valid url address is required";
+            document.getElementById("website").style.border="2px solid red";
+          }
+          if(message.length<=0){
+            document.getElementById("er4").innerHTML=" This Field is Required";
+            document.getElementById("message").style.border="2px solid red";
+          }
+        }
+      </script>
+    <div align="center">
+    <form>
+        <table>
+        <tr>
+        <td>Name:</td>
+        <td><input type="text" id="name"><span id="er1" style="color:red"></span></td>
+        </tr>
+        <tr>
+        <td>Email:</td>
+        <td><input type="text" id="email"><span id="er2" style="color:red"></span></td>
+        </tr>
+        <tr>
+        <td>Website:</td>
+        <td><input type="text" id="website"><span id="er3" style="color:red"></span></td>
+        </tr>
+        <tr>
+        <td>Message:</td>
+        <td><textarea rows="4" id="message"></textarea><span id="er4" style="color:red"></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" onclick="validate()">Submit</button></td>
+        </tr>
+        </table>
+    </form>
+</div>
+<br>
+<hr>
+<h3>Name:<span style="color:blue">Chintam Sravan Kumar</span></h3>
+<h3>Reigstration Number: <span style="color:blue">21BCE7822</span></h3>
+<h3>College Mail ID:<span style="color:blue">sravan.21bce7822@vitapstudent.ac.in</span></h3>
+<h3>Course:<span style="color:blue">MERN FullStack Development</span></h3>
+<h3>Slot:<span style="color:blue">Tue,Thu,Sat 10am-12pm</span></h3>
+</body>
+</html>

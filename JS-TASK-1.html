@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS-TASK-1</title>
+</head>
+<body>
+  <h1>Enter x:</h1>
+<script>
+  function reversenum(){
+    let x = document.getElementById("numb").value;
+    let result=0;
+    while(x>0){
+      let p=x%10;
+      result=result*10+p;
+      x=Math.floor(x/10);
+    }
+    document.getElementById("demo").innerHTML = result;
+  }
+</script>
+x=<input id="numb">
+<button type="button" onclick="reversenum()">Submit</button>
+<p id="demo"></p>
+<br>
+<hr>
+<h3>Name:<span style="color:blue">Chintam Sravan Kumar</span></h3>
+<h3>Reigstration Number: <span style="color:blue">21BCE7822</span></h3>
+<h3>College Mail ID:<span style="color:blue">sravan.21bce7822@vitapstudent.ac.in</span></h3>
+<h3>Course:<span style="color:blue">MERN FullStack Development</span></h3>
+<h3>Slot:<span style="color:blue">Tue,Thu,Sat 10am-12pm</span></h3>
+</body>
+</html>
+</body>
+</html>

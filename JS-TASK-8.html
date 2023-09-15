@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-TASK-8</title>
+</head>
+<script>
+    function validate(){
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let repassword = document.getElementById("repassword").value;
+    let age = document.getElementById("age").value;
+    let pno = document.getElementById("pno").value;
+    let address = document.getElementById("address").value;
+    let state = document.getElementById("state").value;
+
+    if(fname.length<=5){
+        document.getElementById("efname").innerHTML = "POOR";
+        document.getElementById("efname").style.color = "red";
+    }
+    if(lname.length<=5){
+        document.getElementById("elname").innerHTML = "POOR";
+        document.getElementById("elname").style.color = "red";
+    }
+    if(email.length<=5){
+        document.getElementById("eemail").innerHTML = "POOR";
+        document.getElementById("eemail").style.color = "red";
+    }
+    if(password.length<=5){
+        document.getElementById("epassword").innerHTML = "POOR";
+        document.getElementById("epassword").style.color = "red";
+    }
+    if(repassword.length<=5 || repassword!=password){
+        document.getElementById("erepassword").innerHTML = "POOR OR MISMATCH";
+        document.getElementById("erepassword").style.color = "red";
+    }
+    if(age.length<2){
+        document.getElementById("eage").innerHTML = "POOR";
+        document.getElementById("eage").style.color = "red";
+    }
+    if(pno.length<10||pno.length>10){
+        document.getElementById("epno").innerHTML = "POOR";
+        document.getElementById("epno").style.color = "red";
+    }
+    if(address.length<5){
+        document.getElementById("eaddress").innerHTML = "POOR";
+        document.getElementById("eaddress").style.color = "red";
+    }
+    if(state<3){
+        document.getElementById("estate").innerHTML = "POOR";
+        document.getElementById("estate").style.color = "red";
+    }
+    
+
+}
+</script>
+<body >
+    <div align="center" style="background-image:linear-gradient(#d4c933,#e476ce);margin:0px 400px">
+    <h1 style="color:blue" id="h1">Registration form</h1>
+    <form >
+        <table>
+          <tr>
+            <td>First Name</td>
+            <td><input type="text" size="50" id="fname"><span id="efname"></span></td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td><input type="text" size="50" id="lname"><span id="elname"></span></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="email" size="50" id="email"><span id="eemail"></span></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" size="50" id="password"><span id="epassword"></span></td>
+          </tr>
+          <tr>
+            <td>Re-enter Password</td>
+            <td><input type="password" size="50" id="repassword"><span id="erepassword"></span></td>
+          </tr>
+          <tr>
+            <td rowspan="3" name="gender">Gender:</td>
+            <tr><td><input type="radio" name="gender" id="male">Male</td></tr>
+            <tr><td><input type="radio" name="gender" id="female">Female</td></tr> 
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td><input type="number" style="width: 363px;" id="age"><span id="eage"></span></td>
+          </tr>
+          <tr>
+            <td>Phone Number:</td>
+            <td><input type="tel" size="50" id="pno"><span id="epno"></span></td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td><textarea rows="5" cols="47" id="address"></textarea><span id="eaddress"></span></td>
+          </tr>
+          <tr>
+            <td>State:</td>
+            <td><input type="text" size="50" id="state"><span id="estate"></span></td>
+          </tr>
+          <tr>
+            <td>Country:</td>
+            <td>
+              <select id="country" name="country">
+                <option>Choose your country</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>Australia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Languages known:</td>
+            <td>
+              <input type="checkbox" id="english" name="languages_known">English
+              <input type="checkbox" id="kannada" name="languages_known">Kannada
+              <input type="checkbox" id="hindi" name="languages_known">Hindi
+              <input type="checkbox" id="telugu" name="languages_known">Telugu
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" ><input type="checkbox">Hereby I declare all the given details are true</td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right"> Log in to <a href="https://ethnus.com/">Ethnus</a> website</td>
+          </tr>
+        </table>
+        
+        <button align="center" type="button" onclick="validate()" style="background-color:red;border-radius:10px;color:white;margin:20px;padding:5px;text-decoration: underline;" value="REGISTER">REGISTER</button><br><br>
+      </form>
+    </div>
+    <br>
+    <hr>
+    <h3>Name:<span style="color:blue">Chintam Sravan Kumar</span></h3>
+    <h3>Reigstration Number: <span style="color:blue">21BCE7822</span></h3>
+    <h3>College Mail ID:<span style="color:blue">sravan.21bce7822@vitapstudent.ac.in</span></h3>
+    <h3>Course:<span style="color:blue">MERN FullStack Development</span></h3>
+    <h3>Slot:<span style="color:blue">Tue,Thu,Sat 10am-12pm</span></h3>
+</body>
+</html>

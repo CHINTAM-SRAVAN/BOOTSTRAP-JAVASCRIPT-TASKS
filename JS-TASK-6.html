@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JS-TASK-6</title>
+    
+</head>
+<style>
+    .icon {
+        padding: 10px;
+        margin:0px;
+        background: gray;
+    }
+</style>
+<body>
+    <script>
+        function validate(){
+        let uname = document.getElementById("uname").value;
+        let password = document.getElementById("password").value;
+        if(uname=="sravan" || password=="sravan"){
+            document.getElementById("error").innerHTML = "Login Successfull";
+            document.getElementById("error").style.color="green"
+        }else{
+            document.getElementById("error").innerHTML = "Username or Password is Invalid";
+            document.getElementById("error").style.color="red"
+        }
+    }
+    </script>
+    <div style="background-color:lightgray;margin:10px 600px;padding:10px" align="center">
+    <form>
+        <h1>Instagram</h1>
+        <div style="display:flex;margin:10px 38px">
+        <i class="fa fa-user icon"></i>
+        <input style="padding:10px;" id="uname" type="text" placeholder="Username" class="text"><br><br></div>
+        <div style="display:flex;margin:10px 38px">
+        <i class="fa fa-lock icon"></i>
+        <input style="padding:10px;" id="password" type="password" placeholder="Password" class="text"><br><br></div>  
+        <button type="button" onclick="validate()" style="padding:10px;width:60%;background-color:blue;color:white">Log in</button><br><br>
+          <input type="checkbox"> Remember me
+          <span style="float:right;">Forgot <a href="#">password?</a></span>
+      </form>
+    </div>
+    <p style="margin:10px 640px;">Don't have an account! <a href="#" >Sign up here.</a></p>
+    <p id="error" style="margin:10px 640px;"></p>
+    <p style="margin:10px 530px;background-color:yellow;">Enter both password and username as "sravan" to get correct result</p>
+       <br><br>
+      <hr>
+      <h3>Name:<span style="color:blue">Chintam Sravan Kumar</span></h3>
+      <h3>Reigstration Number: <span style="color:blue">21BCE7822</span></h3>
+      <h3>College Mail ID:<span style="color:blue">sravan.21bce7822@vitapstudent.ac.in</span></h3>
+      <h3>Course:<span style="color:blue">MERN FullStack Development</span></h3>
+      <h3>Slot:<span style="color:blue">Tue,Thu,Sat 10am-12pm</span></h3>
+</body>
+</html>
